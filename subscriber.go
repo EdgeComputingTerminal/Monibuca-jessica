@@ -11,7 +11,7 @@ import (
 	"github.com/gobwas/ws"
 )
 
-var streamPathReg = regexp.MustCompile("/(jessica/)?((.+)(\\.flv)|(.+))")
+var streamPathReg = regexp.MustCompile("/(ws/)?((.+)(\\.flv)|(.+))")
 
 func WsHandler(w http.ResponseWriter, r *http.Request) {
 	sign := r.URL.Query().Get("sign")
