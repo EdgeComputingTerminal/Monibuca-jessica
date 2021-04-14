@@ -42,7 +42,7 @@ func run() {
 		utils.ListenAddrs(config.ListenAddr, config.ListenAddrTLS, config.CertFile, config.KeyFile, http.HandlerFunc(WsHandler))
 	} else {
 		Print(Green("Jessica start reuse gateway port"))
-		http.HandleFunc("/jessica/", WsHandler)
+		http.HandleFunc("/ws/", WsHandler)
 	}
 }
 func jessibuca(w http.ResponseWriter, r *http.Request) {
